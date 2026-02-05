@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Navbar</title>
+  <title>Responsive Navbar</title>
+
   <style>
     body {
       margin: 0;
@@ -39,27 +40,77 @@
       color: #fff;
       text-decoration: none;
       font-size: 16px;
+      position: relative;
     }
 
-    .nav-links a:hover {
-      color: #00c2ff;
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      left: 0;
+      bottom: -4px;
+      background: #00c2ff;
+      transition: width 0.3s;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    /* Hamburger */
+    .menu-btn {
+      display: none;
+      font-size: 26px;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .menu-btn {
+        display: block;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #222;
+        flex-direction: column;
+        width: 200px;
+        display: none;
+        padding: 15px;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
     }
   </style>
 </head>
 <body>
 
-  <nav>
-    <div class="nav-container">
-      <a href="#" class="logo">MySite</a>
+<nav>
+  <div class="nav-container">
+    <a href="#" class="logo">MySite</a>
 
-      <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<script>
+  function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("active");
+  }
+</script>
 
 </body>
 </html>

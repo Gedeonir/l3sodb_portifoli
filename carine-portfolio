@@ -1,0 +1,75 @@
+/* Fonts and Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+    padding: 20px 0;
+}
+
+/* Header */
+header {
+    background: #6c5ce7; /* Fun student-friendly purple */
+    color: #fff;
+    padding: 25px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 5px solid #fd79a8; /* playful border */
+    border-radius: 0 0 15px 15px;
+}
+
+header::before {
+    content: "Hey there! I'm Carine 😊";
+    display: block;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffeaa7;
+    margin-bottom: 10px;
+}
+
+header h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+header nav {
+    text-align: center;
+}
+
+header nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+header nav a:hover {
+    color: #ffeaa7;
+    transform: scale(1.1);
+}
+
+/* Sections */
+section {
+    padding: 50px 20px;
+    background-color: #fff;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8p

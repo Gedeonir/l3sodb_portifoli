@@ -1,13 +1,13 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin: 0;
   padding: 0;
-  background: #f4f6f8;
+  background:blueviolet;
   color: #333;
 }
 
 header {
-  background: #2563eb;
+  background: #232257;
   color: white;
   padding: 40px;
   text-align: center;

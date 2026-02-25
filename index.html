@@ -4,71 +4,122 @@
   <meta charset="UTF-8" />
   <title>My Portfolio</title>
   <style>
+    /* ------------------- GENERAL ------------------- */
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0f2f5;
+      color: #333;
+      transition: background 0.3s, color 0.3s;
     }
 
+    h1, h2 {
+      text-align: center;
+      color: #0a66c2;
+      margin-bottom: 20px;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* ------------------- NAVBAR ------------------- */
     nav {
-      background: #222;
+      background: linear-gradient(90deg, #0a66c2, #074a99);
       padding: 12px 24px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
 
     .nav-container {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      max-width: 1200px;
+      margin: auto;
     }
 
     .logo {
       color: #fff;
-      font-size: 20px;
+      font-size: 24px;
       font-weight: bold;
-      text-decoration: none;
     }
 
     .nav-links {
       list-style: none;
       display: flex;
-      gap: 20px;
+      gap: 25px;
       margin: 0;
       padding: 0;
     }
 
     .nav-links a {
       color: #fff;
-      text-decoration: none;
+      font-weight: 500;
+      padding: 6px 12px;
+      border-radius: 4px;
+      transition: background 0.3s;
     }
 
     .nav-links a:hover {
-      color: #00c2ff;
+      background: rgba(255,255,255,0.2);
     }
 
-    h1, h2 {
-      text-align: center;
-      color: #0a66c2;
+    /* ------------------- PORTFOLIO SECTION ------------------- */
+    .portfolio-section {
+      padding: 60px 20px;
+      background: linear-gradient(135deg, #00c2ff, #0a66c2);
+      color: #fff;
     }
 
+    .portfolio-section h1, .portfolio-section h2, .portfolio-section p {
+      color: #fff;
+    }
+
+    .portfolio-section ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .portfolio-section ul li {
+      background: rgba(255,255,255,0.2);
+      padding: 10px 15px;
+      border-radius: 8px;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    .portfolio-section ul li:hover {
+      background: rgba(255,255,255,0.4);
+      transform: translateY(-3px);
+    }
+
+    /* ------------------- STUDENT CARDS ------------------- */
     .container {
       display: flex;
       flex-wrap: wrap;
-      gap: 20px;
       justify-content: center;
-      padding: 20px;
+      gap: 25px;
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
     }
 
     .card {
-      background-color: #fff;
+      background: #fff;
+      border-radius: 12px;
       width: 250px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       padding: 20px;
       text-align: center;
-      transition: transform 0.2s;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
     }
 
     .card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-10px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.2);
     }
 
     .card img {
@@ -77,37 +128,67 @@
       border-radius: 50%;
       object-fit: cover;
       margin-bottom: 15px;
+      border: 3px solid #0a66c2;
     }
 
-    .card a {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 5px 10px;
-      background-color: #0a66c2;
+    .card h3 {
+      margin: 10px 0 5px 0;
+      color: #0a66c2;
+    }
+
+    .card p {
+      margin: 5px 0;
+      font-size: 14px;
+      color: #555;
+    }
+
+    /* ------------------- DARK MODE TOGGLE ------------------- */
+    .toggle-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #0a66c2;
       color: #fff;
-      text-decoration: none;
-      border-radius: 5px;
+      border: none;
+      padding: 10px 14px;
+      border-radius: 50px;
+      cursor: pointer;
+      font-weight: bold;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      transition: background 0.3s;
     }
 
-    .card a:hover {
-      background-color: #074a99;
+    .toggle-btn:hover {
+      background: #074a99;
     }
 
-    .portfolio-section {
-      text-align: center;
-      padding: 40px 20px;
-      background: #f5f5f5;
+    body.dark {
+      background: #121212;
+      color: #ddd;
     }
 
-    .portfolio-section ul {
-      list-style: none;
-      padding: 0;
+    body.dark .card {
+      background: #1f1f1f;
+      color: #ddd;
     }
+
+    body.dark .portfolio-section {
+      background: linear-gradient(135deg, #0a66c2, #00c2ff);
+      color: #fff;
+    }
+
+    body.dark .nav-links a {
+      color: #fff;
+    }
+
   </style>
 </head>
-
 <body>
 
+  <!-- DARK MODE TOGGLE -->
+  <button class="toggle-btn" onclick="document.body.classList.toggle('dark')">🌙</button>
+
+  <!-- NAVBAR -->
   <nav>
     <div class="nav-container">
       <a href="#" class="logo">MySite</a>
@@ -120,7 +201,7 @@
     </div>
   </nav>
 
-  <!-- Portfolio Intro -->
+  <!-- PORTFOLIO SECTION -->
   <section class="portfolio-section">
     <h1>Hello, I'm Darcy</h1>
     <p>Frontend Developer</p>
@@ -133,7 +214,7 @@
     </ul>
   </section>
 
-  <!-- Student Profiles -->
+  <!-- STUDENT PROFILES -->
   <h2>Student Profiles</h2>
 
   <div class="container">

@@ -21,6 +21,8 @@
 
     a {
       text-decoration: none;
+      color: #0a66c2;
+      font-weight: 500;
     }
 
     /* ------------------- NAVBAR ------------------- */
@@ -54,7 +56,6 @@
 
     .nav-links a {
       color: #fff;
-      font-weight: 500;
       padding: 6px 12px;
       border-radius: 4px;
       transition: background 0.3s;
@@ -64,6 +65,35 @@
       background: rgba(255,255,255,0.2);
     }
 
+    /* ------------------- DARK MODE ------------------- */
+    .toggle-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #0a66c2;
+      color: #fff;
+      border: none;
+      padding: 10px 14px;
+      border-radius: 50px;
+      cursor: pointer;
+      font-weight: bold;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+
+    body.dark {
+      background: #121212;
+      color: #ddd;
+    }
+
+    body.dark .card {
+      background: #1f1f1f;
+      color: #ddd;
+    }
+
+    body.dark .portfolio-section {
+      background: linear-gradient(135deg, #0a66c2, #00c2ff);
+    }
+
     /* ------------------- PORTFOLIO SECTION ------------------- */
     .portfolio-section {
       padding: 60px 20px;
@@ -71,7 +101,9 @@
       color: #fff;
     }
 
-    .portfolio-section h1, .portfolio-section h2, .portfolio-section p {
+    .portfolio-section h1,
+    .portfolio-section h2,
+    .portfolio-section p {
       color: #fff;
     }
 
@@ -88,12 +120,6 @@
       background: rgba(255,255,255,0.2);
       padding: 10px 15px;
       border-radius: 8px;
-      transition: background 0.3s, transform 0.3s;
-    }
-
-    .portfolio-section ul li:hover {
-      background: rgba(255,255,255,0.4);
-      transform: translateY(-3px);
     }
 
     /* ------------------- STUDENT CARDS ------------------- */
@@ -114,12 +140,11 @@
       padding: 20px;
       text-align: center;
       box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-      transition: transform 0.3s, box-shadow 0.3s;
+      transition: transform 0.3s;
     }
 
     .card:hover {
       transform: translateY(-10px);
-      box-shadow: 0 12px 24px rgba(0,0,0,0.2);
     }
 
     .card img {
@@ -130,115 +155,104 @@
       margin-bottom: 15px;
       border: 3px solid #0a66c2;
     }
-
-    .card h3 {
-      margin: 10px 0 5px 0;
-      color: #0a66c2;
-    }
-
-    .card p {
-      margin: 5px 0;
-      font-size: 14px;
-      color: #555;
-    }
-
-    /* ------------------- DARK MODE TOGGLE ------------------- */
-    .toggle-btn {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      background: #0a66c2;
-      color: #fff;
-      border: none;
-      padding: 10px 14px;
-      border-radius: 50px;
-      cursor: pointer;
-      font-weight: bold;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-      transition: background 0.3s;
-    }
-
-    .toggle-btn:hover {
-      background: #074a99;
-    }
-
-    body.dark {
-      background: #121212;
-      color: #ddd;
-    }
-
-    body.dark .card {
-      background: #1f1f1f;
-      color: #ddd;
-    }
-
-    body.dark .portfolio-section {
-      background: linear-gradient(135deg, #0a66c2, #00c2ff);
-      color: #fff;
-    }
-
-    body.dark .nav-links a {
-      color: #fff;
-    }
-
   </style>
 </head>
 <body>
 
-  <!-- DARK MODE TOGGLE -->
-  <button class="toggle-btn" onclick="document.body.classList.toggle('dark')">🌙</button>
+<button class="toggle-btn" onclick="document.body.classList.toggle('dark')">🌙</button>
 
-  <!-- NAVBAR -->
-  <nav>
-    <div class="nav-container">
-      <a href="#" class="logo">MySite</a>
-      <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <!-- PORTFOLIO SECTION -->
-  <section class="portfolio-section">
-    <h1>Hello, I'm Darcy</h1>
-    <p>Frontend Developer</p>
-
-    <h2>My Projects</h2>
-    <ul>
-      <li>Portfolio Website</li>
-      <li>Todo App</li>
-      <li>Blog Website</li>
+<!-- NAVBAR -->
+<nav>
+  <div class="nav-container">
+    <a href="#" class="logo">MySite</a>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="#">Contact</a></li>
     </ul>
-  </section>
-
-  <!-- STUDENT PROFILES -->
-  <h2>Student Profiles</h2>
-
-  <div class="container">
-    <div class="card">
-      <img src="https://via.placeholder.com/100" alt="Student Photo" />
-      <h3>John Doe</h3>
-      <p>Computer Science</p>
-      <p>Kigali, Rwanda</p>
-    </div>
-
-    <div class="card">
-      <img src="https://via.placeholder.com/100" alt="Student Photo" />
-      <h3>Jane Smith</h3>
-      <p>Software Engineering</p>
-      <p>Kigali, Rwanda</p>
-    </div>
-
-    <div class="card">
-      <img src="https://via.placeholder.com/100" alt="Student Photo" />
-      <h3>Alex Mutoni</h3>
-      <p>Information Technology</p>
-      <p>Kigali, Rwanda</p>
-    </div>
   </div>
+</nav>
+
+<!-- PORTFOLIO SECTION -->
+<section class="portfolio-section">
+  <h1>Hello, I'm Darcy</h1>
+  <p style="text-align:center;">Frontend Developer</p>
+
+  <h2>My Projects</h2>
+  <ul>
+    <li>Portfolio Website</li>
+    <li>Todo App</li>
+    <li>Blog Website</li>
+  </ul>
+</section>
+
+<h2>Student Profiles</h2>
+
+<div class="container">
+
+  <div class="card">
+    <img src="https://via.placeholder.com/100" />
+    <h3>John Doe</h3>
+    <p>Computer Science</p>
+    <p>Kigali, Rwanda</p>
+  </div>
+
+  <div class="card">
+    <img src="https://via.placeholder.com/100" />
+    <h3>Jane Smith</h3>
+    <p>Software Engineering</p>
+    <p>Kigali, Rwanda</p>
+  </div>
+
+  <div class="card">
+    <img src="https://via.placeholder.com/100" />
+    <h3>Alex Mutoni</h3>
+    <p>Information Technology</p>
+    <p>Kigali, Rwanda</p>
+  </div>
+
+  <div class="card">
+    <img src="https://via.placeholder.com/100" />
+    <h3>Mwiza Ella</h3>
+    <p>Software Engineering</p>
+    <p>Kigali, Rwanda</p>
+    <a href="#">View Portfolio</a>
+  </div>
+
+  <div class="card">
+    <img src="https://via.placeholder.com/100" />
+    <h3>Cyubahiro Billy</h3>
+    <p>Information Technology</p>
+    <p>Kigali, Rwanda</p>
+    <a href="./nav.html">View Portfolio</a>
+  </div>
+
+  <div class="card">
+    <img src="https://via.placeholder.com/100" />
+    <h3>Joyce Bella</h3>
+    <p>Information Technology</p>
+    <p>Kigali, Rwanda</p>
+    <a href="./portfolio/index.html">View Portfolio</a>
+  </div>
+
+  <div class="card">
+    <img src="https://via.placeholder.com/100" />
+    <h3>Shema Prince</h3>
+    <p>Information Technology</p>
+    <p>Kigali, Rwanda</p>
+    <a href="./portfolio/index.html">View Portfolio</a>
+  </div>
+
+  <div class="card">
+    <img src="https://via.placeholder.com/100" />
+    <h3>Hirwa Kevin</h3>
+    <p>Information Technology</p>
+    <p>Kigali, Rwanda</p>
+    <a href="./index4.html">View Portfolio</a>
+  </div>
+
+</div>
 
 </body>
 </html>

@@ -1,32 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-  <meta charset="UTF-8">
-  <title>Navbar</title>
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
-
-    nav {
-      background: #222;
-      padding: 12px 24px;
-    }
-
-    .nav-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo {
-      color: #fff;
-      font-size: 20px;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
     .nav-links {
       list-style: none;
       display: flex;
@@ -44,22 +25,209 @@
     .nav-links a:hover {
       color: #00c2ff;
     }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .card {
+      background-color: #fff;
+      width: 250px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      margin: 10px 0 5px 0;
+      color: #0a66c2;
+    }
+
+    .card p {
+      margin: 5px 0;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .card a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 5px 10px;
+      background-color: #0a66c2;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    .card a:hover {
+      background-color: #074a99;
+    }
   </style>
-</head>
-<body>
+  </style>
 
-  <nav>
-    <div class="nav-container">
-      <a href="#" class="logo">MySite</a>
+  <h1 style="text-align: center; color: #0a66c2">Student Profiles</h1>
 
-      <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
+  <div class="container">
+    <!-- Student Card 1 -->
+    <div class="card">
+      <img src="https://via.placeholder.com/100" alt="Student Photo" />
+      <h3>John Doe</h3>
+      <p>Computer Science</p>
+      <p>Kigali, Rwanda</p>
+      <a href="#">View Portfolio</a>
     </div>
-  </nav>
+    <div class="card">
+      <img src="./divin/your.PNG" alt="Student Photo" />
+      <h3>Gatesi Divin</h3>
+      <p>Information Technology</p>
+      <p>Kigali, Rwanda</p>
+      <a href="./divin/index.html">View Portfolio</a>
+    </div>
+    <!-- Student Card 2 -->
+    <div class="card">
+      <img src="https://via.placeholder.com/100" alt="Student Photo" />
+      <h3>mwiza ella</h3>
+      <p>Software Engineering</p>
+      <p>Kigali, Rwanda</p>
+      <a href="#">View Portfolio</a>
+    </div>
 
+    <!-- Student Card 3 -->
+    <div class="card">
+      <img src="https://via.placeholder.com/100" alt="Student Photo" />
+      <h3>Alex Mutoni</h3>
+      <p>Information Technology</p>
+      <p>Kigali, Rwanda</p>
+      <a href="#">View Portfolio</a>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/100" alt="Student Photo" />
+      <h3>Cyubahiro billy</h3>
+      <p>Information Technology</p>
+      <p>Kigali, Rwanda</p>
+      <a href="./nav.html">View Portfolio</a>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/100" alt="Student Photo" />
+      <h3>Joyce Bella</h3>
+      <p>Information Technology</p>
+      <p>Kigali, Rwanda</p>
+      <a href="./portfolio/index.html">View Portfolio</a>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/100" alt="Student Photo" />
+      <h3>Annick chimene</h3>
+      <p>Information Technology</p>
+      <p>Kigali, Rwanda</p>
+      <a href="./annick.html">View Portfolio</a>
+    </div>
+
+    <div class="card">
+      <img src="gael.png" alt="Student Photo" />
+      <h3>ishimwe gael</h3>
+      <p>Information Technology</p>
+      <p>Kigali, Rwanda</p>
+      <a href="gael.html">View Portfolio</a>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/100" alt="Student Photo" />
+      <h3>Hirwa kevin</h3>
+      <p>Information Technology</p>
+      <p>Kigali, Rwanda</p>
+      <a href="./index4.html">View Portfolio</a>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/100" alt="Student Photo" />
+      <h3>hirwa bruno</h3>
+      <p>Information Technology</p>
+      <p>Kigali, Rwanda</p>
+      <a href="./bruno/bruno.html">View Portfolio</a>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/100" alt="Student Photo" />
+
+      <h3>ADELTE Boncoeur</h3>
+      <p>PCB & PCM</p>
+      <p>Kigali, Rwanda</p>
+      <a href="./adelte/universe.html">View Portfolio</a>
+    </div>
+
+    <div class="card">
+      <img src="." alt="Student Photo" />
+      <h3>NKUBITO MANZI fred</h3>
+      <p>Information Technology</p>
+      <p>Kigali, Rwanda</p>
+      <a href="Manzi/manzi.html">View Portfolio</a>
+    </div>
+    <div class="card">
+      <img src="." alt="Student Photo" />
+      <h3>Cyomoro Rickey</h3>
+      <p>Information Technology</p>
+      <p>Kigali, Rwanda</p>
+      <a href="ricky/index.html">View Portfolio</a>
+    </div>
+
+    <div class="card">
+      <img src="." alt="Student Photo" />
+      <h3>Mugisha Joshua</h3>
+      <p>Information Technology</p>
+      <p>Kigali, Rwanda</p>
+      <a href=".html">View Portfolio</a>
+    </div>
+
+    <div class="card">
+      <img src="." alt="Student Photo" />
+      <h3>nshogoza gerald</h3>
+      <p>Information Technology</p>
+      <p>Kigali, Rwanda</p>
+      <a href="./gerald/gerald.html">View Portfolio</a>
+    </div>
+    <div class="card">
+      <img src="." alt="Student Photo" />
+      <h3>Gisa Muganwa Elysee</h3>
+      <p>Information Technology</p>
+      <p>Kigali, Rwanda</p>
+      <a href="elyse/elyse.html">View Portfolio</a>
+    </div>
+    <div class="card">
+      <img src="." alt="Student Photo" />
+      <h3>ikizabera-moise</h3>
+      <p>Information Technology</p>
+      <p>Kigali, Rwanda</p>
+      <a href="moise/index.html">View Portfolio</a>
+    </div>
+    <div class="card">
+      <img src="." alt="Student Photo" />
+      <h3>nathan prince</h3>
+      <p>Information Technology</p>
+      <p>Kigali, Rwanda</p>
+      <a href="./nathan/nathan.html">View Portfolio</a>
+  </div>
+  </div>
+
+  <footer style="background-color:#000; color:#fff; text-align:center; padding:10px 0; font-size:12px;">
+    &copy; l3 sodb
+  </footer>
 </body>
+
 </html>
